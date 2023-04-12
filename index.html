@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <title>Message Box</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    #message-box {
+        background-color:rgba(173, 216, 230, 0.822);
+        text-align: center;
+        color: white;
+    }
+    #header {
+        height: 25px;
+        padding: 10px;
+        border-bottom: 1px solid white;
+        cursor: pointer;
+    }
+    #content {
+        height: 200px;
+        padding: 10px;
+        display: none;
+    }
+    #close {
+        float: right;
+    }
+</style>
+<body>
+    <div id="message-box">
+        <div id="header">
+            <span id="close">x</span>
+            Mesajınız var
+        </div>
+        <div id="content">
+
+        </div>
+    </div>
+
+
+
+    <script>
+        $(function(){
+            
+            $("#header").click(function(){
+                $("#content").toggle("slow");
+            });
+
+            $("#close").click(function(){
+                $("#message-box").hide("slow");
+            });
+
+        });
+    </script>
+</body>
+</html>
